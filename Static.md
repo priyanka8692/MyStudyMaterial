@@ -15,7 +15,7 @@
 	-Memory allocation of such variable happens at the time of class loading.
 	-Static variable are initialized before the initialization of the instance variable.
 
-	public class StaticVariable {
+	public class StaticVariableDemo {
 	  	  	static int count = 0;// static variable
 		  	//int count = 0;
 		  	public int increment(){
@@ -33,12 +33,20 @@
 		} 
 	}
 
-	- If variable is static value is shared among objects .Firstly value of the count on calling obj1.increment will become 1 and on calling obj2.increment count value changes and becomes 2 .As count is shared among both object we het out put 2.
+	- If variable is static value is shared among objects .
+	Firstly value of the count on calling obj1.increment will become 1 
+	and on calling obj2.increment count value changes and becomes 2 .
+	As count is shared among both object we het out put 2.
 
-	- If it is instance variable then each object will have copy of instance variable.So in this case the on calling obj1.increment value of count(its own copy) sofor obj1 becomes 1 and for object it incrmenet value in its own copy so it become 1 for it .
+	- If it is instance variable then each object will have copy of 
+	instance variable.So in this case the on calling obj1.increment 
+	value of count(its own copy) sofor obj1 becomes 1 and for object 
+	it incrmenet value in its own copy so it become 1 for it .
 
-## When to use static variable:
-Use static variable when the property is common to all the object.Example name of the college for all the student in student class can be made static.
+### When to use static variable:
+Use static variable when the property is common to all the object.
+Example name of the college for all the student in student class can 
+be made static.
 
 
 
@@ -82,6 +90,39 @@ Use static variable when the property is common to all the object.Example name o
 	Output: 21
 	static method can change value odf static varivle .
 
+###When to use Static method
+	-If the method is not using any instance variable.
+	-If any operation is not dependent on instance creation.
+	-If you are sure that code would not be changed or overriden.
+	(A ststic method cannot be overriden).
 
 
-### Static class:
+### Static block:
+	-Code in static block is executed only ones.
+	-It is used to initialize static variable.
+	-It execute when first time you make object of that class or
+	first time you access static member  of that class.
+	-Static blocks are executed before the constructor.
+	-They are executed before main method at the time of class loading.
+
+	Example:
+
+	public class StaticBlockDemo {
+		static int i;
+		static {
+			i=10;
+			System.out.println("static block demo");
+			
+		}
+		public static void main(String[] args) {
+			// TODO Auto-generated method stub
+			System.out.println(StaticBlockDemo.i);
+			
+
+		}
+
+	}
+
+	Output:
+	static block demo
+	10
