@@ -90,7 +90,7 @@ be made static.
 	Output: 21
 	static method can change value odf static varivle .
 
-###When to use Static method
+### When to use Static method
 	-If the method is not using any instance variable.
 	-If any operation is not dependent on instance creation.
 	-If you are sure that code would not be changed or overriden.
