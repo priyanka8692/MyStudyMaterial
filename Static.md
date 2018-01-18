@@ -126,3 +126,87 @@ be made static.
 	Output:
 	static block demo
 	10
+
+### Static Class:
+
+	- Only nested class in Java can be static.
+	- Main points for static nested class and non-static nested class
+		* Nested static class does not need reference of the outer class but non-static nested class need reference to the outer class
+
+		* Non-static nested class can access both static and non-static members of the outer class but static class can access only static members of the Outer class.
+
+		*********************************
+
+		Behavior in thread???????????//
+
+### Static in Polymorphsim
+	
+	1-In overriding concept : As static method is not associated with object of the class. It is associated with the class itself .So static methods cannot be overriden.
+
+	Example :
+	class Parent{
+		static void m1() {
+			System.out.println("m1 called from Parent");
+		}
+		public void m2() {
+			System.out.println("m2 called from Parent");
+		}
+	
+	}
+	class child extends Parent{
+		static void m1() {
+			System.out.println("m1 called from Child");
+		}
+		public void m2() {
+			System.out.println("m2 called from Child");
+		}
+	}
+	public class OverrideStaticDemo {
+		public static void main(String[] args) {
+			Parent obj = new child();
+			obj.m1();
+			obj.m2();
+		}
+	}
+
+		Output:
+
+		m1 called from Parent
+		m2 called from Child
+
+	2-Overloading Concept:
+
+	Yes static methods can be overloaded because static is related to class. They are resolved at compile time not run time.Overloading happens at compile time,so the static methods can be overloaded.
+
+	Example:
+
+	public class StaticOverloadDemo {
+
+		
+		static void m1() {
+			System.out.println("m1() without parameter");
+		}
+		
+		static void m1(String a) {
+			System.out.println("m1() with parameter "+a);
+		}
+		public static void main(String[] args) {
+			// TODO Auto-generated method stub
+			m1();
+			m1("Priyanka");
+			
+
+		}
+
+	}
+
+	Output:
+	m1() without parameter
+	m1() with parameter Priyanka
+
+### Static in encapsulation:
+
+	- making variable as static violets the encapsulation because then u can use the vaiable without using getters and setters.
+
+	
+
