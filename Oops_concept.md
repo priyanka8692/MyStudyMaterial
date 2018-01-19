@@ -44,7 +44,8 @@
 			eats bone
 			eats grass
 
-## Inheritance : Inheritance is a mechanism by which one object acquire all the properties and behaviour of the Parent object.
+## Inheritance : 
+Inheritance is a mechanism by which one object acquire all the properties and behaviour of the Parent object.
 
 	-Need of Inheritance:
 	1)for method overriding(achieving runtime polymorphism)
